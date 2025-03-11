@@ -1,11 +1,55 @@
+<!--Make it more scalable dark/media quaries might need comments or ids on things to make clear-->
 <!DOCTYPE html>
-<html>
+<html class="bg-gray-800">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
   </head>
-  <body>
-    <h1 class="text-3xl font-bold underline bg-red-500">Hello world!</h1>
+  <body class="grid grid-cols-10 h-330">
+    <div class="dark:bg-black bg-amber-100 col-span-1">
+      <nav>
+        <ul>
+          <li><img src="" alt="" /></li>
+          <li><img src="" alt="" /></li>
+          <li><img src="" alt="" /></li>
+        </ul>
+        <ul>
+          <li>
+            <img src="" alt="" />
+            <p class="dark:text-white">MonTalk</p>
+          </li>
+          <li>
+            <img src="" alt="" />
+            <p class="dark:text-white">Explore MonTalk</p>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="dark:bg-gray-900 col-span-9">
+      <nav>
+        <h2 class="dark:text-white text-2xl">
+          MonTalk
+          <span class="inline-block rotate-90 relative left-1 top-1">></span>
+        </h2>
+        <ul>
+          <li><img src="" alt="" /></li>
+          <li><img src="" alt="" /></li>
+        </ul>
+      </nav>
+      <div class="w-auto h-300 flex justify-center items-center">
+        <div class="w-200 flex flex-col">
+          <h1 class="dark:text-white">What can I help with?</h1>
+          <input
+            name="result"
+            id="result"
+            rows="20"
+            cols="20"
+            placeholder="Ask anything"
+            class="dark:text-white"
+          />
+        </div>
+      </div>
+    </div>
   </body>
 </html>

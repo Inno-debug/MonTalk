@@ -6,10 +6,24 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-red-300: oklch(0.808 0.114 19.571);
     --color-red-500: oklch(0.637 0.237 25.331);
+    --color-red-950: oklch(0.258 0.092 26.042);
+    --color-amber-50: oklch(0.987 0.022 95.277);
+    --color-amber-100: oklch(0.962 0.059 95.617);
+    --color-gray-800: oklch(0.278 0.033 256.848);
+    --color-gray-900: oklch(0.21 0.034 264.665);
+    --color-black: #000;
+    --color-white: #fff;
     --spacing: 0.25rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-3xl: 1.875rem;
     --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
     --font-weight-bold: 700;
     --ease-in: cubic-bezier(0.4, 0, 1, 1);
     --ease-out: cubic-bezier(0, 0, 0.2, 1);
@@ -229,6 +243,33 @@
   .sticky {
     position: sticky;
   }
+  .top-1 {
+    top: calc(var(--spacing) * 1);
+  }
+  .top-2 {
+    top: calc(var(--spacing) * 2);
+  }
+  .top-3 {
+    top: calc(var(--spacing) * 3);
+  }
+  .right-2 {
+    right: calc(var(--spacing) * 2);
+  }
+  .left-0 {
+    left: calc(var(--spacing) * 0);
+  }
+  .left-1 {
+    left: calc(var(--spacing) * 1);
+  }
+  .left-2 {
+    left: calc(var(--spacing) * 2);
+  }
+  .left-3 {
+    left: calc(var(--spacing) * 3);
+  }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
+  }
   .isolate {
     isolation: isolate;
   }
@@ -250,6 +291,30 @@
   .col-auto {
     grid-column: auto;
   }
+  .col-span-1 {
+    grid-column: span 1 / span 1;
+  }
+  .col-span-2 {
+    grid-column: span 2 / span 2;
+  }
+  .col-span-4 {
+    grid-column: span 4 / span 4;
+  }
+  .col-span-6 {
+    grid-column: span 6 / span 6;
+  }
+  .col-span-7 {
+    grid-column: span 7 / span 7;
+  }
+  .col-span-8 {
+    grid-column: span 8 / span 8;
+  }
+  .col-span-9 {
+    grid-column: span 9 / span 9;
+  }
+  .col-span-10 {
+    grid-column: span 10 / span 10;
+  }
   .col-span-full {
     grid-column: 1 / -1;
   }
@@ -261,6 +326,9 @@
   }
   .row-auto {
     grid-row: auto;
+  }
+  .row-span-3 {
+    grid-row: span 3 / span 3;
   }
   .row-span-full {
     grid-row: 1 / -1;
@@ -427,8 +495,32 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
   .h-9 {
     height: calc(var(--spacing) * 9);
+  }
+  .h-70 {
+    height: calc(var(--spacing) * 70);
+  }
+  .h-300 {
+    height: calc(var(--spacing) * 300);
+  }
+  .h-330 {
+    height: calc(var(--spacing) * 330);
+  }
+  .h-400 {
+    height: calc(var(--spacing) * 400);
+  }
+  .h-500 {
+    height: calc(var(--spacing) * 500);
+  }
+  .h-700 {
+    height: calc(var(--spacing) * 700);
+  }
+  .h-1000 {
+    height: calc(var(--spacing) * 1000);
   }
   .h-screen {
     height: 100vh;
@@ -450,6 +542,30 @@
   }
   .w-4 {
     width: calc(var(--spacing) * 4);
+  }
+  .w-72 {
+    width: calc(var(--spacing) * 72);
+  }
+  .w-200 {
+    width: calc(var(--spacing) * 200);
+  }
+  .w-500 {
+    width: calc(var(--spacing) * 500);
+  }
+  .w-700 {
+    width: calc(var(--spacing) * 700);
+  }
+  .w-720 {
+    width: calc(var(--spacing) * 720);
+  }
+  .w-1000 {
+    width: calc(var(--spacing) * 1000);
+  }
+  .w-auto {
+    width: auto;
+  }
+  .w-fit {
+    width: fit-content;
   }
   .w-screen {
     width: 100vw;
@@ -556,6 +672,9 @@
   }
   .scale-none {
     scale: none;
+  }
+  .rotate-90 {
+    rotate: 90deg;
   }
   .rotate-none {
     rotate: none;
@@ -683,6 +802,24 @@
   }
   .auto-rows-min {
     grid-auto-rows: min-content;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-5 {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+  .grid-cols-7 {
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+  }
+  .grid-cols-8 {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  .grid-cols-9 {
+    grid-template-columns: repeat(9, minmax(0, 1fr));
+  }
+  .grid-cols-10 {
+    grid-template-columns: repeat(10, minmax(0, 1fr));
   }
   .grid-cols-none {
     grid-template-columns: none;
@@ -1057,6 +1194,24 @@
   .bg-\[var\(--my_variable\)\] {
     background-color: var(--my_variable);
   }
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
+  }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
+  }
+  .bg-black {
+    background-color: var(--color-black);
+  }
+  .bg-gray-800 {
+    background-color: var(--color-gray-800);
+  }
+  .bg-gray-900 {
+    background-color: var(--color-gray-900);
+  }
+  .bg-red-300 {
+    background-color: var(--color-red-300);
+  }
   .bg-red-500 {
     background-color: var(--color-red-500);
   }
@@ -1065,6 +1220,9 @@
   }
   .bg-red-500\/\[50\%\] {
     background-color: color-mix(in oklab, var(--color-red-500) 50%, transparent);
+  }
+  .bg-red-950 {
+    background-color: var(--color-red-950);
   }
   .-bg-conic {
     --tw-gradient-position: in oklab;
@@ -1283,9 +1441,21 @@
   .align-top {
     vertical-align: top;
   }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
+  }
   .text-3xl {
     font-size: var(--text-3xl);
     line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-5xl {
+    font-size: var(--text-5xl);
+    line-height: var(--tw-leading, var(--text-5xl--line-height));
   }
   .leading-none {
     --tw-leading: 1;
@@ -1367,9 +1537,6 @@
   }
   .\[color\:red\]\/50\! {
     color: color-mix(in oklab, red 50%, transparent) !important;
-  }
-  .text-red-500 {
-    color: var(--color-red-500);
   }
   .capitalize {
     text-transform: capitalize;
@@ -1811,6 +1978,21 @@
   }
   .transform-view {
     transform-box: view-box;
+  }
+  .dark\:bg-black {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-black);
+    }
+  }
+  .dark\:bg-gray-900 {
+    @media (prefers-color-scheme: dark) {
+      background-color: var(--color-gray-900);
+    }
+  }
+  .dark\:text-white {
+    @media (prefers-color-scheme: dark) {
+      color: var(--color-white);
+    }
   }
 }
 @property --tw-translate-x {
