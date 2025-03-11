@@ -1,0 +1,25 @@
+{
+  "name": "montalk",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Inno-debug/MonTalk#readme",
+  "bugs": {
+    "url": "https://github.com/Inno-debug/MonTalk/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Inno-debug/MonTalk.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.0.12",
+    "tailwindcss": "^4.0.12"
+  }
+}
