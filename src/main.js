@@ -1,3 +1,4 @@
+const chatBox = document.querySelector("#result");
 document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("textarea").value = "";
+  chatBox.value = "";
 });
