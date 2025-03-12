@@ -1,13 +1,15 @@
 <!--Make it more scalable dark/media quaries might need comments or ids on things to make clear-->
 <!DOCTYPE html>
-<html class="bg-gray-800">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="./output.css" rel="stylesheet" />
+    <title>MonTalk</title>
+    <link rel="icon" href="../Images/witchBowl.png" type="image/png" />
   </head>
-  <body class="grid grid-cols-10 h-330">
-    <div class="dark:bg-black bg-amber-100 col-span-1">
+  <body class="tw:grid tw:grid-cols-10 tw:h-screen">
+    <div class="tw:dark:bg-dark-side tw:bg-light-main col-span-1">
       <nav>
         <ul>
           <li><img src="" alt="" /></li>
@@ -17,39 +19,46 @@
         <ul>
           <li>
             <img src="" alt="" />
-            <p class="dark:text-white">MonTalk</p>
+            <p class="tw:dark:text-white">MonTalk</p>
           </li>
           <li>
             <img src="" alt="" />
-            <p class="dark:text-white">Explore MonTalk</p>
+            <p class="tw:dark:text-white">Explore MonTalk</p>
           </li>
         </ul>
       </nav>
     </div>
-    <div class="dark:bg-gray-900 col-span-9">
+    <div class="tw:dark:bg-dark-main tw:col-span-9">
       <nav>
-        <h2 class="dark:text-white text-2xl">
+        <h2 class="tw:dark:text-white tw:text-2xl">
           MonTalk
-          <span class="inline-block rotate-90 relative left-1 top-1">></span>
+          <span
+            class="tw:inline-block tw:rotate-90 tw:relative tw:left-1 tw:top-1"
+            >></span
+          >
         </h2>
         <ul>
           <li><img src="" alt="" /></li>
           <li><img src="" alt="" /></li>
         </ul>
       </nav>
-      <div class="w-auto h-300 flex justify-center items-center">
-        <div class="w-200 flex flex-col">
-          <h1 class="dark:text-white">What can I help with?</h1>
-          <input
+      <div class="tw:h-300 tw:flex tw:justify-center tw:items-center">
+        <div
+          class="tw:w-full tw:flex tw:flex-col tw:justify-center tw:items-center"
+        >
+          <h1 class="tw:dark:text-white tw:text-3xl tw:pb-8">
+            What can I help with?
+          </h1>
+          <textarea
             name="result"
             id="result"
-            rows="20"
-            cols="20"
             placeholder="Ask anything"
-            class="dark:text-white"
-          />
+            class="tw:dark:text-white tw:resize-none tw:w-200 tw:h-20 tw:border-2 tw:border-amber-50 tw:rounded-3xl tw:ps-7 tw:pt-3"
+          >
+          </textarea>
         </div>
       </div>
     </div>
+    <script src="main.js"></script>
   </body>
 </html>
