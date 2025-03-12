@@ -9,110 +9,124 @@
     <link rel="icon" href="../Images/witchBowl.png" type="image/png" />
   </head>
   <body class="tw:grid tw:grid-cols-10 tw:h-screen">
-    <div class="tw:dark:bg-dark-side tw:bg-light-main col-span-1">
-      <nav>
-        <ul>
+    <!--Side Bar-->
+    <div class="tw:dark:bg-dark-side tw:bg-light-side col-span-1">
+      <!--Nav Menu of side bar-->
+      <nav class="tw:gap-8 tw:flex tw:flex-col">
+        <!--Top menu of side bar-->
+        <ul class="tw:flex tw:justify-between tw:pt-4 tw:pl-4 tw:pr-4">
           <li>
             <img
               src="Images/sidebarlight.png"
               alt=""
               id="sidebarlight"
-              class="tw:w-9 tw:h-9"
+              class="tw:w-6 tw:h-6"
             />
             <img
               src="Images/sidebardark.png"
               alt=""
               id="sidebardark"
-              class="tw:w-9 tw:h-9 tw:hidden"
+              class="tw:w-6 tw:h-6 tw:hidden"
             />
           </li>
-          <li>
+          <li class="tw:flex tw:gap-5">
             <img
               src="Images/searchlight.png"
               alt=""
               id="searchlight"
-              class="tw:w-9 tw:h-9"
+              class="tw:w-7 tw:h-7"
             />
             <img
               src="Images/searchdark.png"
               alt=""
               id="searchdark"
-              class="tw:w-9 tw:h-9 tw:hidden"
+              class="tw:w-7 tw:h-7 tw:hidden"
             />
-          </li>
-          <li>
             <img
               src="Images/newchatlight.png"
               alt=""
               id="newchatlight"
-              class="tw:w-9 tw:h-9"
+              class="tw:w-6 tw:h-6"
             />
             <img
               src="Images/newchatdark.png"
               alt=""
               id="newchatdark"
-              class="tw:w-9 tw:h-9 tw:hidden"
+              class="tw:w-6 tw:h-6 tw:hidden"
             />
           </li>
         </ul>
-        <ul>
-          <li>
+        <!--under top menu of side bar-->
+        <ul class="tw:gap-5 tw:flex tw:flex-col">
+          <li class="tw:flex tw:gap-3 tw:pl-4">
             <img
               src="Images/witchBowl.png"
               alt=""
               id="witchBowl"
-              class="tw:w-8 tw:h-8"
+              class="tw:w-7 tw:h-7"
             />
-            <p class="tw:dark:text-white">MonTalk</p>
+            <p
+              class="tw:dark:text-white tw:flex tw:items-center tw:justify-center"
+            >
+              MonTalk
+            </p>
           </li>
-          <li>
+          <li class="tw:flex tw:gap-3 tw:pl-4">
             <img
               src="Images/explorelight.png"
               alt=""
               id="explorelight"
-              class="tw:w-8 tw:h-8"
+              class="tw:w-7 tw:h-7"
             />
             <img
               src="Images/exploredark.png"
               alt=""
               id="exploredark"
-              class="tw:w-8 tw:h-8 tw:hidden"
+              class="tw:w-7 tw:h-7 tw:hidden"
             />
-            <p class="tw:dark:text-white">Explore MonTalk</p>
+            <p
+              class="tw:dark:text-white tw:flex tw:items-center tw:justify-center"
+            >
+              Explore MonTalk
+            </p>
           </li>
         </ul>
       </nav>
     </div>
-    <div class="tw:dark:bg-dark-main tw:col-span-9">
-      <nav>
-        <h2 class="tw:dark:text-white tw:text-2xl">
+    <!--Main Area-->
+    <div class="tw:dark:bg-dark-main tw:bg-light-main tw:col-span-9">
+      <!--Nav Menu of Main Area-->
+      <nav class="tw:flex tw:justify-between tw:pl-10 tw:pr-10">
+        <!--MonTalk Box-->
+        <h2 class="tw:dark:text-white tw:text-2xl tw:pt-3">
           MonTalk
           <img
             src="Images/downarrowlight.png"
             alt=""
             id="downarrowlight"
-            class="tw:w-8 tw:h-8 tw:inline"
+            class="tw:w-7 tw:h-7 tw:inline"
           />
           <img
             src="Images/downarrowdark.png"
             alt=""
             id="downarrowdark"
-            class="tw:w-8 tw:h-8 tw:hidden"
+            class="tw:w-7 tw:h-7 tw:hidden"
           />
         </h2>
-        <ul>
+        <!--Light Mode and Login-->
+        <ul class="tw:flex tw:gap-8 tw:pt-4">
           <li>
             <img
               src="Images/lightmode.png"
               alt=""
               id="lightmode"
-              class="tw:w-9 tw:h-9"
+              class="tw:w-8 tw:h-8"
             />
             <img
               src="Images/darkmode.png"
               alt=""
               id="darkmode"
-              class="tw:w-9 tw:h-9 tw:hidden"
+              class="tw:w-8 tw:h-8 tw:hidden"
             />
           </li>
           <li>
@@ -120,13 +134,13 @@
               src="Images/loginlight.png"
               alt=""
               id="loginlight"
-              class="tw:w-9 tw:h-9"
+              class="tw:w-8 tw:h-8"
             />
             <img
               src="Images/logindark.png"
               alt=""
               id="logindark"
-              class="tw:w-9 tw:h-9 tw:hidden"
+              class="tw:w-8 tw:h-8 tw:hidden"
             />
           </li>
         </ul>
