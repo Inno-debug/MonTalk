@@ -157,20 +157,8 @@
   }
 }
 @layer utilities {
-  .tw\:relative {
-    position: relative;
-  }
-  .tw\:top-1 {
-    top: calc(var(--tw-spacing) * 1);
-  }
-  .tw\:left-1 {
-    left: calc(var(--tw-spacing) * 1);
-  }
   .tw\:col-span-9 {
     grid-column: span 9 / span 9;
-  }
-  .tw\:block {
-    display: block;
   }
   .tw\:flex {
     display: flex;
@@ -184,26 +172,14 @@
   .tw\:inline {
     display: inline;
   }
-  .tw\:inline-block {
-    display: inline-block;
-  }
   .tw\:h-8 {
     height: calc(var(--tw-spacing) * 8);
   }
   .tw\:h-9 {
     height: calc(var(--tw-spacing) * 9);
   }
-  .tw\:h-10 {
-    height: calc(var(--tw-spacing) * 10);
-  }
-  .tw\:h-16 {
-    height: calc(var(--tw-spacing) * 16);
-  }
   .tw\:h-20 {
     height: calc(var(--tw-spacing) * 20);
-  }
-  .tw\:h-32 {
-    height: calc(var(--tw-spacing) * 32);
   }
   .tw\:h-300 {
     height: calc(var(--tw-spacing) * 300);
@@ -217,23 +193,11 @@
   .tw\:w-9 {
     width: calc(var(--tw-spacing) * 9);
   }
-  .tw\:w-10 {
-    width: calc(var(--tw-spacing) * 10);
-  }
-  .tw\:w-16 {
-    width: calc(var(--tw-spacing) * 16);
-  }
-  .tw\:w-32 {
-    width: calc(var(--tw-spacing) * 32);
-  }
   .tw\:w-200 {
     width: calc(var(--tw-spacing) * 200);
   }
   .tw\:w-full {
     width: 100%;
-  }
-  .tw\:rotate-90 {
-    rotate: 90deg;
   }
   .tw\:resize-none {
     resize: none;
@@ -263,32 +227,14 @@
   .tw\:bg-light-main {
     background-color: var(--tw-color-light-main);
   }
-  .tw\:p-0 {
-    padding: calc(var(--tw-spacing) * 0);
-  }
-  .tw\:p-5 {
-    padding: calc(var(--tw-spacing) * 5);
-  }
   .tw\:ps-7 {
     padding-inline-start: calc(var(--tw-spacing) * 7);
-  }
-  .tw\:pe-5 {
-    padding-inline-end: calc(var(--tw-spacing) * 5);
   }
   .tw\:pt-3 {
     padding-top: calc(var(--tw-spacing) * 3);
   }
-  .tw\:pb-3 {
-    padding-bottom: calc(var(--tw-spacing) * 3);
-  }
-  .tw\:pb-5 {
-    padding-bottom: calc(var(--tw-spacing) * 5);
-  }
   .tw\:pb-8 {
     padding-bottom: calc(var(--tw-spacing) * 8);
-  }
-  .tw\:pl-5 {
-    padding-left: calc(var(--tw-spacing) * 5);
   }
   .tw\:text-2xl {
     font-size: var(--tw-text-2xl);
@@ -297,12 +243,6 @@
   .tw\:text-3xl {
     font-size: var(--tw-text-3xl);
     line-height: var(--tw-leading, var(--tw-text-3xl--line-height));
-  }
-  .tw\:whitespace-normal {
-    white-space: normal;
-  }
-  .tw\:whitespace-pre {
-    white-space: pre;
   }
   .tw\:dark\:bg-dark-main {
     @media (prefers-color-scheme: dark) {

@@ -15,37 +15,45 @@ const sideBarLight = document.querySelector("#sidebarlight");
 const sideBarDark = document.querySelector("#sidebardark");
 const witchBowl = document.querySelector("#witchbowl");
 
-//Dark Mode
-
-window
-  .matchMedia("(prefers-color-scheme: dark)")
-  .addEventListener("change", (event) => {
-    if (event.matches) {
-      switchingIconMode(downArrowDark, downArrowLight);
-      switchingIconMode(darkMode, lightMode);
-      switchingIconMode(exploreDark, exploreLight);
-      switchingIconMode(loginDark, loginLight);
-      switchingIconMode(searchDark, searchLight);
-      switchingIconMode(sideBarDark, sideBarLight);
-      switchingIconMode(newChatDark, newChatLight);
-    } else {
-      switchingIconMode(downArrowLight, downArrowDark);
-      switchingIconMode(lightMode, darkMode);
-      switchingIconMode(exploreLight, exploreDark);
-      switchingIconMode(loginLight, loginDark);
-      switchingIconMode(searchLight, searchDark);
-      switchingIconMode(sideBarLight, sideBarDark);
-      switchingIconMode(newChatLight, newChatDark);
-    }
-  });
-
 function switchingIconMode(light, dark) {
-  light.style.display = "unset";
-  dark.style.display = "none";
+  if (light && dark) {
+    light.style.display = "unset";
+    dark.style.display = "none";
+  }
 }
 
-//Fixing chat box
+// Function to apply the correct theme immediately on page load
+function applyTheme() {
+  const isDarkMode = window.matchMedia("(prefers-color-scheme: dark)").matches;
 
+  if (isDarkMode) {
+    switchingIconMode(downArrowDark, downArrowLight);
+    switchingIconMode(darkMode, lightMode);
+    switchingIconMode(exploreDark, exploreLight);
+    switchingIconMode(loginDark, loginLight);
+    switchingIconMode(searchDark, searchLight);
+    switchingIconMode(sideBarDark, sideBarLight);
+    switchingIconMode(newChatDark, newChatLight);
+  } else {
+    switchingIconMode(downArrowLight, downArrowDark);
+    switchingIconMode(lightMode, darkMode);
+    switchingIconMode(exploreLight, exploreDark);
+    switchingIconMode(loginLight, loginDark);
+    switchingIconMode(searchLight, searchDark);
+    switchingIconMode(sideBarLight, sideBarDark);
+    switchingIconMode(newChatLight, newChatDark);
+  }
+}
+
+// Apply theme on page load
+document.addEventListener("DOMContentLoaded", applyTheme);
+
+// Listen for system theme changes
+window
+  .matchMedia("(prefers-color-scheme: dark)")
+  .addEventListener("change", applyTheme);
+
+// Fixing chat box on load
 document.addEventListener("DOMContentLoaded", function () {
   chatBox.value = "";
 });
