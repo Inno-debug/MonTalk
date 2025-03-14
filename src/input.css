@@ -1,8 +1,20 @@
 @import "tailwindcss" prefix(tw);
 
 @theme {
+  /*Base document colors*/
   --color-dark-main: #1a1a1a;
-  --color-light-main: #f8f8f8;
   --color-dark-side: #0f0f0f;
+  --color-dark-accent: #4a4a4a;
+  --color-light-main: #f8f8f8;
   --color-light-side: #e8e8e8;
+  --color-light-accent: #d3d3d3;
+  /*Font Colors*/
+  --color-dark-mainText: #ffffff;
+  --color-dark-sideText: #e0e0e0;
+  --color-light-mainText: #000000;
+  --color-light-sideText: #333333;
+  /*Spacing*/
+  --spacing-ChatBoxmin: 85%;
+  --spacing-ChatBoxmax: 80%;
+  --spacing-Chatpadding: 20vh;
 }
