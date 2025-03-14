@@ -14,11 +14,12 @@
       class="tw:fixed tw:h-full tw:w-65 tw:bg-light-side tw:dark:bg-dark-side"
     >
       <!--Nav Menu of side bar-->
-      <nav class="tw:flex tw:flex-col tw:gap-8">
+      <nav class="tw:flex tw:flex-col tw:gap-4">
         <!--Top menu of side bar-->
         <ul class="tw:flex tw:justify-between tw:pt-3 tw:pr-3 tw:pl-3">
           <li
-            class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-lg tw:hover:cursor-pointer tw:hover:bg-dark-accent"
+            id="sidebar"
+            class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-lg tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:hover:bg-dark-accent"
           >
             <img
               src="Images/sidebarlight.png"
@@ -35,7 +36,8 @@
           </li>
           <ul class="tw:flex tw:gap-2">
             <li
-              class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-lg tw:hover:cursor-pointer tw:hover:bg-dark-accent"
+              id="search"
+              class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-lg tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:hover:bg-dark-accent"
             >
               <img
                 src="Images/searchlight.png"
@@ -52,7 +54,8 @@
             </li>
 
             <li
-              class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-lg tw:hover:cursor-pointer tw:hover:bg-dark-accent"
+              id="newchat"
+              class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-lg tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:hover:bg-dark-accent"
             >
               <img
                 src="Images/newchatlight.png"
@@ -70,8 +73,11 @@
           </ul>
         </ul>
         <!--under top menu of side bar-->
-        <ul class="tw:flex tw:flex-col tw:gap-5">
-          <li class="tw:flex tw:gap-3 tw:pl-4">
+        <ul class="tw:flex tw:flex-col tw:gap-1">
+          <li
+            id="witchbowl"
+            class="tw:mr-4 tw:ml-3 tw:flex tw:h-9 tw:w-55 tw:items-center tw:justify-start tw:gap-3 tw:rounded-lg tw:pl-1.5 tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:hover:bg-dark-accent"
+          >
             <img
               src="Images/witchBowl.png"
               alt=""
@@ -84,7 +90,10 @@
               MonTalk
             </p>
           </li>
-          <li class="tw:flex tw:gap-3 tw:pl-4">
+          <li
+            id="explore"
+            class="tw:mr-4 tw:ml-3 tw:flex tw:h-9 tw:w-55 tw:items-center tw:justify-start tw:gap-3 tw:rounded-lg tw:pl-1.5 tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:hover:bg-dark-accent"
+          >
             <img
               src="Images/explorelight.png"
               alt=""
@@ -112,7 +121,8 @@
       <nav class="tw:flex tw:justify-between tw:pr-10 tw:pl-10">
         <!--MonTalk Selector-->
         <h2
-          class="tw:mt-3 tw:flex tw:items-center tw:justify-center tw:rounded-lg tw:pr-4 tw:pb-1 tw:pl-4 tw:text-2xl tw:hover:cursor-pointer tw:hover:bg-dark-accent tw:dark:text-white"
+          id="montalk"
+          class="tw:mt-3 tw:flex tw:items-center tw:justify-center tw:rounded-lg tw:pr-4 tw:pb-1 tw:pl-4 tw:text-2xl tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:text-white tw:dark:hover:bg-dark-accent"
         >
           MonTalk
           <img
@@ -131,23 +141,25 @@
         <!--Light Mode and Login-->
         <ul class="tw:flex tw:gap-8 tw:pt-4">
           <li
-            class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-3xl tw:hover:cursor-pointer tw:hover:bg-dark-accent"
+            id="lightingmode"
+            class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-3xl tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:hover:bg-dark-accent"
           >
             <img
               src="Images/lightmode.png"
               alt=""
               id="lightmode"
-              class="tw:h-8 tw:w-8"
+              class="tw:h-8.5 tw:w-8.5"
             />
             <img
               src="Images/darkmode.png"
               alt=""
               id="darkmode"
-              class="tw:hidden tw:h-8 tw:w-8"
+              class="tw:hidden tw:h-8.5 tw:w-8.5"
             />
           </li>
           <li
-            class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-3xl tw:hover:cursor-pointer tw:hover:bg-dark-accent"
+            id="login"
+            class="tw:flex tw:h-10 tw:w-10 tw:items-center tw:justify-center tw:rounded-3xl tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:hover:bg-dark-accent"
           >
             <img
               src="Images/loginlight.png"
