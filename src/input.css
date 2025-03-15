@@ -17,4 +17,10 @@
   --spacing-ChatBoxmin: 85%;
   --spacing-ChatBoxmax: 80%;
   --spacing-Chatpadding: 20vh;
+  --spacing-Sidebarsmall: 10vw;
+  --spacing-Loginsmall: 6.5vw;
+  --spacing-Loginsupertiny: 1.5vw;
+  --spacing-Loginsmallgap: 0.4vw;
+  /*Breakpoint*/
+  --breakpoint-xs: 430px;
 }

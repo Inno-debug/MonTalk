@@ -2,7 +2,6 @@
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
-    --tw-color-black: #000;
     --tw-color-white: #fff;
     --tw-spacing: 0.25rem;
     --tw-text-2xl: 1.5rem;
@@ -22,6 +21,10 @@
     --tw-spacing-ChatBoxmin: 85%;
     --tw-spacing-ChatBoxmax: 80%;
     --tw-spacing-Chatpadding: 20vh;
+    --tw-spacing-Sidebarsmall: 10vw;
+    --tw-spacing-Loginsmall: 6.5vw;
+    --tw-spacing-Loginsupertiny: 1.5vw;
+    --tw-spacing-Loginsmallgap: 0.4vw;
   }
 }
 @layer base {
@@ -178,8 +181,11 @@
   .tw\:left-1\.5 {
     left: calc(var(--tw-spacing) * 1.5);
   }
-  .tw\:mt-3 {
-    margin-top: calc(var(--tw-spacing) * 3);
+  .tw\:mt-4 {
+    margin-top: calc(var(--tw-spacing) * 4);
+  }
+  .tw\:mt-5 {
+    margin-top: calc(var(--tw-spacing) * 5);
   }
   .tw\:mr-4 {
     margin-right: calc(var(--tw-spacing) * 4);
@@ -241,6 +247,9 @@
   .tw\:w-10 {
     width: calc(var(--tw-spacing) * 10);
   }
+  .tw\:w-40 {
+    width: calc(var(--tw-spacing) * 40);
+  }
   .tw\:w-55 {
     width: calc(var(--tw-spacing) * 55);
   }
@@ -253,11 +262,25 @@
   .tw\:min-w-ChatBoxmin {
     min-width: var(--tw-spacing-ChatBoxmin);
   }
+  .tw\:-translate-x-Sidebarsmall {
+    --tw-translate-x: calc(var(--tw-spacing-Sidebarsmall) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
+  .tw\:translate-x-Loginsupertiny {
+    --tw-translate-x: var(--tw-spacing-Loginsupertiny);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .tw\:resize-none {
     resize: none;
   }
+  .tw\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .tw\:flex-col {
     flex-direction: column;
+  }
+  .tw\:place-items-center {
+    place-items: center;
   }
   .tw\:items-center {
     align-items: center;
@@ -283,8 +306,8 @@
   .tw\:gap-4 {
     gap: calc(var(--tw-spacing) * 4);
   }
-  .tw\:gap-8 {
-    gap: calc(var(--tw-spacing) * 8);
+  .tw\:gap-Loginsmallgap {
+    gap: var(--tw-spacing-Loginsmallgap);
   }
   .tw\:overflow-hidden {
     overflow: hidden;
@@ -319,9 +342,6 @@
   .tw\:pr-4 {
     padding-right: calc(var(--tw-spacing) * 4);
   }
-  .tw\:pr-10 {
-    padding-right: calc(var(--tw-spacing) * 10);
-  }
   .tw\:pb-1 {
     padding-bottom: calc(var(--tw-spacing) * 1);
   }
@@ -343,9 +363,6 @@
   .tw\:pl-4 {
     padding-left: calc(var(--tw-spacing) * 4);
   }
-  .tw\:pl-10 {
-    padding-left: calc(var(--tw-spacing) * 10);
-  }
   .tw\:text-2xl {
     font-size: var(--tw-text-2xl);
     line-height: var(--tw-leading, var(--tw-text-2xl--line-height));
@@ -353,9 +370,6 @@
   .tw\:text-3xl {
     font-size: var(--tw-text-3xl);
     line-height: var(--tw-leading, var(--tw-text-3xl--line-height));
-  }
-  .tw\:text-black {
-    color: var(--tw-color-black);
   }
   .tw\:outline-0 {
     outline-style: var(--tw-outline-style);
@@ -373,6 +387,58 @@
       @media (hover: hover) {
         background-color: var(--tw-color-light-accent);
       }
+    }
+  }
+  .tw\:xs\:translate-x-Loginsmall {
+    @media (width >= 430px) {
+      --tw-translate-x: var(--tw-spacing-Loginsmall);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .tw\:md\:mt-3 {
+    @media (width >= 48rem) {
+      margin-top: calc(var(--tw-spacing) * 3);
+    }
+  }
+  .tw\:md\:flex {
+    @media (width >= 48rem) {
+      display: flex;
+    }
+  }
+  .tw\:md\:hidden {
+    @media (width >= 48rem) {
+      display: none;
+    }
+  }
+  .tw\:md\:w-auto {
+    @media (width >= 48rem) {
+      width: auto;
+    }
+  }
+  .tw\:md\:translate-x-0 {
+    @media (width >= 48rem) {
+      --tw-translate-x: calc(var(--tw-spacing) * 0);
+      translate: var(--tw-translate-x) var(--tw-translate-y);
+    }
+  }
+  .tw\:md\:justify-between {
+    @media (width >= 48rem) {
+      justify-content: space-between;
+    }
+  }
+  .tw\:md\:gap-8 {
+    @media (width >= 48rem) {
+      gap: calc(var(--tw-spacing) * 8);
+    }
+  }
+  .tw\:md\:pr-10 {
+    @media (width >= 48rem) {
+      padding-right: calc(var(--tw-spacing) * 10);
+    }
+  }
+  .tw\:md\:pl-10 {
+    @media (width >= 48rem) {
+      padding-left: calc(var(--tw-spacing) * 10);
     }
   }
   .tw\:md\:pl-65 {
@@ -424,6 +490,21 @@
       }
     }
   }
+}
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
 }
 @property --tw-outline-style {
   syntax: "*";

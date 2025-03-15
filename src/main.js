@@ -15,12 +15,15 @@ const searchLight = document.querySelector("#searchlight");
 const searchDark = document.querySelector("#searchdark");
 const sideBarLight = document.querySelector("#sidebarlight");
 const sideBarDark = document.querySelector("#sidebardark");
+const sideBarLight2 = document.querySelector("#sidebarlight2");
+const sideBarDark2 = document.querySelector("#sidebardark2");
 const witchBowl = document.querySelector("#witchBowl");
 //Light dark mode background
 const side_Bar = document.querySelector("#side_Bar");
 const main_Area = document.querySelector("#main_Area");
 //Hover containers for images
 const sidebar = document.querySelector("#sidebar");
+const sidebar2 = document.querySelector("#sidebar2");
 const search = document.querySelector("#search");
 const newchat = document.querySelector("#newchat");
 const witch_bowl = document.querySelector("#witchbowl");
@@ -30,18 +33,9 @@ const lightingmode = document.querySelector("#lightingmode");
 const login = document.querySelector("#login");
 const help = document.querySelector("#help");
 
-function switchingIconMode(light, dark) {
-  if (light && dark) {
-    light.style.display = "unset";
-    dark.style.display = "none";
-  }
-}
-
-// Create a new style element
-let style = document.createElement("style");
-let style1 = document.createElement("style1");
-
 // Add CSS rules for the placeholder color
+let style = document.createElement("style");
+let style1 = document.createElement("style");
 style.innerHTML = `
   #result::placeholder {
     color: var(--tw-color-dark-mainText);
@@ -49,6 +43,9 @@ style.innerHTML = `
     #result:focus {
     caret-color: var(--tw-color-dark-mainText);
   }
+    #result{
+    color: var(--tw-color-dark-mainText);
+    }
 `;
 style1.innerHTML = `
   #result::placeholder {
@@ -57,6 +54,10 @@ style1.innerHTML = `
     #result:focus {
     caret-color: var(--tw-color-light-mainText);
   }
+     #result{
+    color: var(--tw-color-light-mainText);
+    }
+    
 `;
 
 //Hover state
@@ -71,6 +72,15 @@ function hoverMode(hover, state) {
   hover.addEventListener("mouseleave", () => {
     hover.style.backgroundColor = "";
   });
+}
+
+//Changing Images
+
+function switchingIconMode(light, dark) {
+  if (light && dark) {
+    light.style.display = "unset";
+    dark.style.display = "none";
+  }
 }
 
 // Function to apply the correct theme immediately on page load
@@ -93,6 +103,7 @@ function applyTheme() {
     switchingIconMode(loginDark, loginLight);
     switchingIconMode(searchDark, searchLight);
     switchingIconMode(sideBarDark, sideBarLight);
+    switchingIconMode(sideBarDark2, sideBarLight2);
     switchingIconMode(newChatDark, newChatLight);
     //Background color
     side_Bar.style.backgroundColor = "var(--tw-color-dark-side)";
@@ -111,6 +122,7 @@ function applyTheme() {
     //Hover
     hoverMode(montalk, darkmodeAccentColor);
     hoverMode(sidebar, darkmodeAccentColor);
+    hoverMode(sidebar2, darkmodeAccentColor);
     hoverMode(search, darkmodeAccentColor);
     hoverMode(newchat, darkmodeAccentColor);
     hoverMode(witch_bowl, darkmodeAccentColor);
@@ -128,6 +140,7 @@ function applyTheme() {
     switchingIconMode(loginLight, loginDark);
     switchingIconMode(searchLight, searchDark);
     switchingIconMode(sideBarLight, sideBarDark);
+    switchingIconMode(sideBarLight2, sideBarDark2);
     switchingIconMode(newChatLight, newChatDark);
     //Background color
     side_Bar.style.backgroundColor = "var(--tw-color-light-side)";
@@ -138,7 +151,6 @@ function applyTheme() {
     witch_bowl.style.color = "var(--tw-color-light-mainText)";
     explore.style.color = "var(--tw-color-light-mainText)";
     help.style.color = "var(--tw-color-light-mainText)";
-    chatBox.style.color = "var(--tw-color-light-mainText)";
 
     if (document.head.contains(style)) {
       document.head.removeChild(style);
@@ -147,6 +159,7 @@ function applyTheme() {
     //Hover
     hoverMode(montalk, lightmodeAccentColor);
     hoverMode(sidebar, lightmodeAccentColor);
+    hoverMode(sidebar2, lightmodeAccentColor);
     hoverMode(search, lightmodeAccentColor);
     hoverMode(newchat, lightmodeAccentColor);
     hoverMode(witch_bowl, lightmodeAccentColor);
