@@ -11,6 +11,7 @@
   <body class="tw:grid tw:h-screen tw:overflow-hidden">
     <!--Side Bar-->
     <div
+      id="side_Bar"
       class="tw:fixed tw:h-full tw:w-65 tw:bg-light-side tw:dark:bg-dark-side"
     >
       <!--Nav Menu of side bar-->
@@ -84,11 +85,7 @@
               id="witchBowl"
               class="tw:h-7 tw:w-7"
             />
-            <p
-              class="tw:flex tw:items-center tw:justify-center tw:dark:text-white"
-            >
-              MonTalk
-            </p>
+            <p class="tw:flex tw:items-center tw:justify-center">MonTalk</p>
           </li>
           <li
             id="explore"
@@ -106,9 +103,7 @@
               id="exploredark"
               class="tw:hidden tw:h-7 tw:w-7"
             />
-            <p
-              class="tw:flex tw:items-center tw:justify-center tw:dark:text-white"
-            >
+            <p class="tw:flex tw:items-center tw:justify-center">
               Explore MonTalk
             </p>
           </li>
@@ -116,13 +111,16 @@
       </nav>
     </div>
     <!--Main Area-->
-    <div class="tw:bg-light-main tw:pl-0 tw:md:pl-65 tw:dark:bg-dark-main">
+    <div
+      id="main_Area"
+      class="tw:bg-light-main tw:pl-0 tw:md:pl-65 tw:dark:bg-dark-main"
+    >
       <!--Nav Menu of Main Area-->
       <nav class="tw:flex tw:justify-between tw:pr-10 tw:pl-10">
         <!--MonTalk Selector-->
         <h2
           id="montalk"
-          class="tw:mt-3 tw:flex tw:items-center tw:justify-center tw:rounded-lg tw:pr-4 tw:pb-1 tw:pl-4 tw:text-2xl tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:text-white tw:dark:hover:bg-dark-accent"
+          class="tw:mt-3 tw:flex tw:items-center tw:justify-center tw:rounded-lg tw:pr-4 tw:pb-1 tw:pl-4 tw:text-2xl tw:hover:cursor-pointer tw:hover:bg-light-accent tw:dark:text-dark-mainText tw:dark:hover:bg-dark-accent"
         >
           MonTalk
           <img
@@ -183,15 +181,16 @@
         <div
           class="tw:flex tw:w-full tw:flex-col tw:items-center tw:justify-center"
         >
-          <h1 class="tw:pb-8 tw:text-3xl tw:dark:text-white">
+          <h1 id="help" class="tw:pb-8 tw:text-3xl tw:dark:text-white">
             What can I help with?
           </h1>
           <!--Chat Box-->
+
           <textarea
             name="result"
             id="result"
             placeholder="Ask anything"
-            class="tw:md:min-w-ChatBox tw:h-20 tw:min-w-ChatBoxmin tw:resize-none tw:rounded-3xl tw:bg-light-accent tw:ps-7 tw:pt-3 tw:outline-0 tw:lg:min-w-ChatBoxmax tw:xl:min-w-200 tw:dark:bg-dark-accent tw:dark:text-white"
+            class="tw:md:min-w-ChatBox tw:h-20 tw:min-w-ChatBoxmin tw:resize-none tw:rounded-3xl tw:bg-light-accent tw:ps-7 tw:pt-3 tw:outline-0 tw:lg:min-w-ChatBoxmax tw:xl:min-w-200 tw:dark:bg-dark-accent"
           >
           </textarea>
         </div>
