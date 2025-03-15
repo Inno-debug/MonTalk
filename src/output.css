@@ -175,11 +175,20 @@
   .tw\:relative {
     position: relative;
   }
+  .tw\:top-0 {
+    top: calc(var(--tw-spacing) * 0);
+  }
   .tw\:top-1 {
     top: calc(var(--tw-spacing) * 1);
   }
   .tw\:left-1\.5 {
     left: calc(var(--tw-spacing) * 1.5);
+  }
+  .tw\:z-0 {
+    z-index: 0;
+  }
+  .tw\:z-10 {
+    z-index: 10;
   }
   .tw\:mt-4 {
     margin-top: calc(var(--tw-spacing) * 4);

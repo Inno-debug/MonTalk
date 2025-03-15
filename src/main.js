@@ -170,6 +170,14 @@ function applyTheme() {
   }
 }
 
+//Sidebar clicker
+sidebar.addEventListener("click", () => {
+  side_Bar.style.display = "none";
+});
+sidebar2.addEventListener("click", () => {
+  side_Bar.style.display = "flex";
+});
+
 // Apply theme on page load
 document.addEventListener("DOMContentLoaded", applyTheme);
 
