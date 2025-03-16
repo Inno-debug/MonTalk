@@ -32,6 +32,8 @@ const montalk = document.querySelector("#montalk");
 const lightingmode = document.querySelector("#lightingmode");
 const login = document.querySelector("#login");
 const help = document.querySelector("#help");
+//navMainSection
+const navMain = document.querySelector("#navMain");
 
 // Add CSS rules for the placeholder color
 let style = document.createElement("style");
@@ -173,9 +175,16 @@ function applyTheme() {
 //Sidebar clicker
 sidebar.addEventListener("click", () => {
   side_Bar.style.display = "none";
+  sidebar2.style.display = "flex";
+  navMain.style.display = "grid";
+  main_Area.style.paddingLeft = "0px";
 });
 sidebar2.addEventListener("click", () => {
   side_Bar.style.display = "flex";
+  navMain.style.display = "flex";
+  sidebar2.style.display = "none";
+  navMain.style.justifyContent = "space-arounnd";
+  main_Area.style.paddingLeft = "260px";
 });
 
 // Apply theme on page load
