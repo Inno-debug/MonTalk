@@ -435,6 +435,11 @@
       justify-content: space-between;
     }
   }
+  .tw\:md\:gap-4 {
+    @media (width >= 48rem) {
+      gap: calc(var(--tw-spacing) * 4);
+    }
+  }
   .tw\:md\:gap-8 {
     @media (width >= 48rem) {
       gap: calc(var(--tw-spacing) * 8);

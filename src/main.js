@@ -34,6 +34,12 @@ const login = document.querySelector("#login");
 const help = document.querySelector("#help");
 //navMainSection
 const navMain = document.querySelector("#navMain");
+const navLogin = document.querySelector("#loginContainer");
+//Matching media rule
+const smallSize = matchMedia("(max-width: 780px)");
+const mediumSize = matchMedia("(min-width: 781px)");
+
+
 
 // Add CSS rules for the placeholder color
 let style = document.createElement("style");
@@ -172,19 +178,63 @@ function applyTheme() {
   }
 }
 
+let sidebarActive = true;
+
+
+function changingSizes (event,event1){
+
+    event1.addEventListener("change", ()=>{
+      side_Bar.style.display = "flex";
+      navLogin.style.transform = "translateX(0)";
+    })
+
+    sidebar.addEventListener("click", () => {
+      if(event.matches){
+      sidebarActive = false;
+      const On = "0px";
+      const Off = "0px";
+      UpdatePadding(On, Off);}
+      else if(event1.matches){navLogin.style.transform = "translateX(10vw)";
+        sidebarActive = false;
+        const On = "0px";
+        const Off = "0px";
+        UpdatePadding(On, Off);}})
+    sidebar2.addEventListener("click", () => {
+      if(event.matches){
+      sidebarActive = true;
+      const On = "0px";
+      const Off = "0px";
+      UpdatePadding(On, Off);}
+      else if(event1.matches){
+        navLogin.style.transform = "translateX(0)";
+      sidebarActive = true;
+      const On = "260px";
+      const Off = "0px";
+      UpdatePadding(On, Off);}})
+  }
+
+function UpdatePadding(sideBarOn, sideBarOff) {
+  if(sidebarActive){
+    main_Area.style.paddingLeft = sideBarOn; 
+  }
+  else{
+    main_Area.style.paddingLeft = sideBarOff;
+  }
+}
+
 //Sidebar clicker
 sidebar.addEventListener("click", () => {
   side_Bar.style.display = "none";
   sidebar2.style.display = "flex";
   navMain.style.display = "grid";
-  main_Area.style.paddingLeft = "0px";
+  
 });
 sidebar2.addEventListener("click", () => {
   side_Bar.style.display = "flex";
   navMain.style.display = "flex";
   sidebar2.style.display = "none";
-  navMain.style.justifyContent = "space-arounnd";
-  main_Area.style.paddingLeft = "260px";
+  navMain.style.justifyContent = "space-between";
+  
 });
 
 // Apply theme on page load
@@ -203,3 +253,6 @@ lightingmode.addEventListener("click", () => {
 document.addEventListener("DOMContentLoaded", function () {
   chatBox.value = "";
 });
+
+//Adding mediaquery event listiners
+changingSizes(smallSize, mediumSize);
