@@ -178,33 +178,49 @@ function applyTheme() {
   }
 }
 
+//Media quaaries settings
 let sidebarActive = true;
 
 
 function changingSizes (event,event1){
-
+    //Changing screen sizes to smaller
     event1.addEventListener("change", ()=>{
-      side_Bar.style.display = "flex";
-      navLogin.style.transform = "translateX(0)";
-    })
-
+        if (event1.matches){side_Bar.style.display = "flex";
+          navLogin.style.transform = "translateX(0px)";
+          main_Area.style.paddingLeft = "260px";}
+          else{
+            side_Bar.style.display = "flex";
+           main_Area.style.paddingLeft = "0px";
+           sidebar2.style.display = "none";
+           navMain.style.justifyContent = "space-between";
+           navLogin.style.transform = "translateX(30vw)";
+          }
+    }
+      
+    )
+    
+    //Artifical state
     sidebar.addEventListener("click", () => {
+      //Small
       if(event.matches){
       sidebarActive = false;
       const On = "0px";
       const Off = "0px";
       UpdatePadding(On, Off);}
+      //Large
       else if(event1.matches){navLogin.style.transform = "translateX(10vw)";
         sidebarActive = false;
         const On = "0px";
         const Off = "0px";
         UpdatePadding(On, Off);}})
     sidebar2.addEventListener("click", () => {
+      //Small
       if(event.matches){
       sidebarActive = true;
       const On = "0px";
       const Off = "0px";
       UpdatePadding(On, Off);}
+      //Large
       else if(event1.matches){
         navLogin.style.transform = "translateX(0)";
       sidebarActive = true;
@@ -212,6 +228,8 @@ function changingSizes (event,event1){
       const Off = "0px";
       UpdatePadding(On, Off);}})
   }
+
+  //Updating Padding
 
 function UpdatePadding(sideBarOn, sideBarOff) {
   if(sidebarActive){

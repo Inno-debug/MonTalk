@@ -14,8 +14,8 @@
   --color-light-mainText: #000000;
   --color-light-sideText: #333333;
   /*Spacing*/
-  --spacing-ChatBoxmin: 85%;
-  --spacing-ChatBoxmax: 80%;
+  --spacing-ChatBoxmin: 75%;
+  --spacing-ChatBoxmax: 70%;
   --spacing-Chatpadding: 20vh;
   --spacing-Sidebarsmall: 10vw;
   --spacing-Loginsmall: 6.5vw;

@@ -18,8 +18,7 @@
     --tw-color-light-accent: #d3d3d3;
     --tw-color-dark-mainText: #ffffff;
     --tw-color-light-mainText: #000000;
-    --tw-spacing-ChatBoxmin: 85%;
-    --tw-spacing-ChatBoxmax: 80%;
+    --tw-spacing-ChatBoxmin: 75%;
     --tw-spacing-Chatpadding: 20vh;
     --tw-spacing-Sidebarsmall: 10vw;
     --tw-spacing-Loginsmall: 6.5vw;
@@ -440,11 +439,6 @@
       gap: calc(var(--tw-spacing) * 4);
     }
   }
-  .tw\:md\:gap-8 {
-    @media (width >= 48rem) {
-      gap: calc(var(--tw-spacing) * 8);
-    }
-  }
   .tw\:md\:pr-10 {
     @media (width >= 48rem) {
       padding-right: calc(var(--tw-spacing) * 10);
@@ -460,9 +454,9 @@
       padding-left: calc(var(--tw-spacing) * 65);
     }
   }
-  .tw\:lg\:min-w-ChatBoxmax {
+  .tw\:lg\:min-w-150 {
     @media (width >= 64rem) {
-      min-width: var(--tw-spacing-ChatBoxmax);
+      min-width: calc(var(--tw-spacing) * 150);
     }
   }
   .tw\:xl\:min-w-200 {
