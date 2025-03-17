@@ -180,7 +180,7 @@ function applyTheme() {
 
 //Media quaaries settings
 let sidebarActive = true;
-
+let innerState = false;
 
 function changingSizes (event,event1){
     //Changing screen sizes to smaller
@@ -189,11 +189,20 @@ function changingSizes (event,event1){
           navLogin.style.transform = "translateX(0px)";
           main_Area.style.paddingLeft = "260px";}
           else{
-            side_Bar.style.display = "flex";
+            if (innerState){
+              side_Bar.style.display = "flex";
+              main_Area.style.paddingLeft = "0px";
+              sidebar2.style.display = "none";
+              navMain.style.display = "space-between";
+              navLogin.style.transform = "translateX(-10vw)";
+            }
+            else{
+              side_Bar.style.display = "flex";
            main_Area.style.paddingLeft = "0px";
            sidebar2.style.display = "none";
-           navMain.style.justifyContent = "space-between";
+           navMain.style.display = "space-between";
            navLogin.style.transform = "translateX(30vw)";
+            }
           }
     }
       
@@ -208,11 +217,13 @@ function changingSizes (event,event1){
       const Off = "0px";
       UpdatePadding(On, Off);}
       //Large
-      else if(event1.matches){navLogin.style.transform = "translateX(10vw)";
+      else if(event1.matches){
         sidebarActive = false;
         const On = "0px";
         const Off = "0px";
-        UpdatePadding(On, Off);}})
+        UpdatePadding(On, Off);
+        navLogin.style.transform = "translateX(13vw)";
+        sidebar2.style.transform = "translateX(-6vw)";}})
     sidebar2.addEventListener("click", () => {
       //Small
       if(event.matches){
@@ -223,6 +234,8 @@ function changingSizes (event,event1){
       //Large
       else if(event1.matches){
         navLogin.style.transform = "translateX(0)";
+        sidebar2.style.transform = "translateX(0)";
+        innerState = true;
       sidebarActive = true;
       const On = "260px";
       const Off = "0px";
