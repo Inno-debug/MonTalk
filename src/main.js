@@ -37,7 +37,7 @@ const navMain = document.querySelector("#navMain");
 const navLogin = document.querySelector("#loginContainer");
 //Matching media rule
 const smallSize = matchMedia("(max-width: 780px)");
-const mediumSize = matchMedia("(min-width: 781px)");
+const mediumSize = matchMedia("(min-width: 780px)");
 
 
 
@@ -181,20 +181,41 @@ function applyTheme() {
 //Media quaaries settings
 let sidebarActive = true;
 let innerState = false;
+let outerState = false;
+let innerToOuter = false;
 
 function changingSizes (event,event1){
     //Changing screen sizes to smaller
     event1.addEventListener("change", ()=>{
-        if (event1.matches){side_Bar.style.display = "flex";
-          navLogin.style.transform = "translateX(0px)";
+        if (event1.matches){
+          if(innerToOuter){
+            side_Bar.style.display = "flex";
+          navLogin.style.transform = "translateX(25vw)";
           main_Area.style.paddingLeft = "260px";}
           else{
+            side_Bar.style.display = "flex";
+          navLogin.style.transform = "translateX(0vw)";
+          main_Area.style.paddingLeft = "260px";}
+          }
+        else{
             if (innerState){
               side_Bar.style.display = "flex";
               main_Area.style.paddingLeft = "0px";
               sidebar2.style.display = "none";
               navMain.style.display = "space-between";
               navLogin.style.transform = "translateX(-10vw)";
+              innerToOuter = false;
+              innerState = false;
+            }
+            else if (outerState){
+              side_Bar.style.display = "flex";
+              main_Area.style.paddingLeft = "0px";
+              sidebar2.style.display = "none";
+              navMain.style.display = "space-between";
+              navLogin.style.transform = "translateX(30vw)";
+              outerState = false;
+              innerToOuter = true;
+             
             }
             else{
               side_Bar.style.display = "flex";
@@ -202,6 +223,7 @@ function changingSizes (event,event1){
            sidebar2.style.display = "none";
            navMain.style.display = "space-between";
            navLogin.style.transform = "translateX(30vw)";
+           
             }
           }
     }
@@ -215,6 +237,9 @@ function changingSizes (event,event1){
       sidebarActive = false;
       const On = "0px";
       const Off = "0px";
+      navLogin.style.transform = "translateX(0)";
+      innerState = false;
+        outerState = true;
       UpdatePadding(On, Off);}
       //Large
       else if(event1.matches){
@@ -223,18 +248,25 @@ function changingSizes (event,event1){
         const Off = "0px";
         UpdatePadding(On, Off);
         navLogin.style.transform = "translateX(13vw)";
-        sidebar2.style.transform = "translateX(-6vw)";}})
+        sidebar2.style.transform = "translateX(-6vw)";
+        innerState = false;
+        outerState = true;
+      }})
     sidebar2.addEventListener("click", () => {
       //Small
       if(event.matches){
       sidebarActive = true;
+      outerState = false;
+        innerState = true;
       const On = "0px";
       const Off = "0px";
+      navLogin.style.transform = "translateX(-10vw)";
       UpdatePadding(On, Off);}
       //Large
       else if(event1.matches){
         navLogin.style.transform = "translateX(0)";
         sidebar2.style.transform = "translateX(0)";
+        outerState = false;
         innerState = true;
       sidebarActive = true;
       const On = "260px";
