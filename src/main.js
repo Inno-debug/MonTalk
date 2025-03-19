@@ -191,11 +191,13 @@ function changingSizes (event,event1){
           if(innerToOuter){
             side_Bar.style.display = "flex";
           navLogin.style.transform = "translateX(25vw)";
-          main_Area.style.paddingLeft = "260px";}
+          main_Area.style.paddingLeft = "260px";
+        }
           else{
             side_Bar.style.display = "flex";
           navLogin.style.transform = "translateX(0vw)";
-          main_Area.style.paddingLeft = "260px";}
+          main_Area.style.paddingLeft = "260px";
+          }
           }
         else{
             if (innerState){

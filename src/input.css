@@ -23,4 +23,5 @@
   --spacing-Loginsmallgap: 0.4vw;
   /*Breakpoint*/
   --breakpoint-xs: 430px;
+  --breakpoint-md: 860px;
 }
