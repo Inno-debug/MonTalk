@@ -404,58 +404,58 @@
     }
   }
   .tw\:md\:mt-3 {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       margin-top: calc(var(--tw-spacing) * 3);
     }
   }
   .tw\:md\:flex {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       display: flex;
     }
   }
   .tw\:md\:hidden {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       display: none;
     }
   }
   .tw\:md\:w-auto {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       width: auto;
     }
   }
   .tw\:md\:translate-x-0 {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       --tw-translate-x: calc(var(--tw-spacing) * 0);
       translate: var(--tw-translate-x) var(--tw-translate-y);
     }
   }
   .tw\:md\:justify-between {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       justify-content: space-between;
     }
   }
   .tw\:md\:gap-4 {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       gap: calc(var(--tw-spacing) * 4);
     }
   }
   .tw\:md\:pr-10 {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       padding-right: calc(var(--tw-spacing) * 10);
     }
   }
   .tw\:md\:pl-10 {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       padding-left: calc(var(--tw-spacing) * 10);
     }
   }
   .tw\:md\:pl-65 {
-    @media (width >= 48rem) {
+    @media (width >= 860px) {
       padding-left: calc(var(--tw-spacing) * 65);
     }
   }
   .tw\:lg\:min-w-150 {
-    @media (width >= 64rem) {
+    @media (width >= 1080px) {
       min-width: calc(var(--tw-spacing) * 150);
     }
   }
