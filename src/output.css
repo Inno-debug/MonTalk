@@ -460,7 +460,7 @@
     }
   }
   .tw\:xl\:min-w-200 {
-    @media (width >= 80rem) {
+    @media (width >= 1200px) {
       min-width: calc(var(--tw-spacing) * 200);
     }
   }
